@@ -1,41 +1,10 @@
-<!-- <script context="module">
-	import {
-		SITE_URL,
-		REPO_URL,
-		SITE_TITLE,
-		SITE_DESCRIPTION,
-		DEFAULT_OG_IMAGE,
-		MY_TWITTER
-	} from '$lib/siteConfig';
-	export const prerender = true; // index page is most visited, lets prerender
-
-	// export const prerender = true; // turned off so it refreshes quickly
-	export async function load({ params, fetch }) {
-		const res = await fetch(`/api/listBlogposts.json`);
-		// alternate strategy https://www.davidwparker.com/posts/how-to-make-an-rss-feed-in-sveltekit
-		// Object.entries(import.meta.glob('./*.md')).map(async ([path, page]) => {
-		if (res.status > 400) {
-			return {
-				status: res.status,
-				error: await res.text()
-			};
-		}
-		const items = await res.json();
-		return {
-			props: { items },
-			maxage: 60 // 1 minute
-		};
-	}
-</script> -->
 <script>
-	// import { format, parse } from 'date-fns';
 	import MainGraphic from '../components/MainGraphic.svelte';
 	import ReturnToTop from '../components/ReturnToTop.svelte';
 	import { fade } from 'svelte/transition';
 	import { quadOut } from 'svelte/easing';
 
-	export let items = { list: [] };
-	$: list = items.list;
+	let list = [];
 
 	let y = 0;
 </script>

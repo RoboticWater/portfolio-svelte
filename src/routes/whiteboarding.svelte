@@ -25,7 +25,7 @@
 	import ideation from '../assets/whiteboarding/ideation.png';
 	import ideas from '../assets/whiteboarding/ideas.png';
 	import ideaFeedback from '../assets/whiteboarding/idea-feedback.png';
-	import ideaDigitalPD from '../assets/whiteboarding/idea-digitalpd-desc.png';
+	import ideaDigitalPD from '../assets/whiteboarding/idea-digitalPD-desc.png';
 	import ideaContextual from '../assets/whiteboarding/idea-contextual-desc.png';
 	import wireQuestion0 from '../assets/whiteboarding/wireframe-question-00.png';
 	import wireQuestion1 from '../assets/whiteboarding/wireframe-question-01.png';
