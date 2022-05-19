@@ -11,7 +11,7 @@
 	import Sidebar from '../components/Sidebar.svelte';
 	import ReturnToTop from '../components/ReturnToTop.svelte';
 
-	import titleImg from '../assets/whiteboarding/title-image.png';
+	// import titleImg from '../assets/whiteboarding/title-image.png';
 	import evidenceBG from '../assets/whiteboarding/preview-evidence-bg.png';
 	import evidenceFG from '../assets/whiteboarding/preview-evidence-content.png';
 	import layerBG from '../assets/whiteboarding/preview-layer-bg.png';
@@ -1211,9 +1211,6 @@
 			border-radius: 0.25rem;
 			box-shadow: var(--box-shadow-default);
 		}
-		&.reversed {
-			// flex-direction: row-reverse;
-		}
 	}
 	.research-results {
 		display: flex;
@@ -1233,11 +1230,6 @@
 		}
 		h3 {
 			margin-top: 0;
-		}
-		.method {
-			// position: sticky;
-			// top: 0.5rem;
-			// align-self: flex-start;
 		}
 	}
 	.card-list {
