@@ -1,8 +1,8 @@
 <script>
-	// import 'intersection-observer-debugger';
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
 	import { quadOut } from 'svelte/easing';
+	import { layoutBGWhite } from '../layout-bg';
 
 	import Card from '../components/Card.svelte';
 	import ProblemSolution from '../components/ProblemSolution.svelte';
@@ -48,7 +48,7 @@
 	let currentSection = '#intro';
 
 	onMount(() => {
-		console.log(1);
+		layoutBGWhite.set(false);
 		let documentSections = [...document.querySelectorAll('section')];
 		sections = [...documentSections].map((section) => ({
 			text: section.querySelector('h2')?.innerText || 'Intro',
@@ -128,6 +128,11 @@
 	let demo = '';
 </script>
 
+<svelte:head>
+	<title>Participatory Whiteboarding — Portfolio</title>
+	<meta property="og:type" content="article" />
+</svelte:head>
+
 <svelte:window bind:scrollY={y} on:keydown={handleKeyDown} on:hashchange={handleHashChange} />
 <main style={`--article-color: ${color}; --article-active-color: ${activeColor};`}>
 	{#if imgPreview}
@@ -180,42 +185,6 @@
 		{/if}
 		<section id="intro">
 			<div class="container bg top">
-				<div class="info">
-					<div class="info__entry">
-						<h4>Timeframe</h4>
-						<ul>
-							<li>August 2021 - May 2022</li>
-						</ul>
-					</div>
-					<div class="info__entry">
-						<h4>Team</h4>
-						<ul>
-							<li>John Britti</li>
-							<li>Sean Perryman</li>
-							<li>Wenrui Zhang</li>
-						</ul>
-					</div>
-					<div class="info__entry">
-						<h4>Tools</h4>
-						<ul>
-							<li>User Interviews</li>
-							<li>Observation</li>
-							<li>Journey Mapping</li>
-							<li>Figma</li>
-						</ul>
-					</div>
-					<div class="info__entry">
-						<h4>Tags</h4>
-						<ul>
-							<li>Participatory Design</li>
-							<li>Whiteboarding</li>
-							<li>Professional Productivity</li>
-							<li>Figma</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<div class="container bg">
 				<ProblemSolution>
 					<span slot="problem-title">Problem Space</span>
 					<span slot="problem">
@@ -230,21 +199,62 @@
 					</span>
 				</ProblemSolution>
 			</div>
-			<p>
-				With the wider adoption of digital whiteboarding tools like Miro and FigJam, design
-				researchers have the opportunity to reimagine the spaces where design takes place. No longer
-				must designers and researchers keep their design work cloistered away from their users; the
-				digital whiteboard can allow everyone to engage together and immerse themselves in data.
-			</p>
-			<p>
-				Our team worked with professional design practitioners both in industry and academia to
-				imagine a whiteboarding toolset that could help bring about this new paradigm of digital
-				participatory design.
-			</p>
-			<p>
-				These tools help design researchers <b>better engage with participants</b> during sessions
-				and <b>immerse themselves in the resulting data</b>.
-			</p>
+			<div class="container bg">
+				<div class="intro">
+					<div class="intro__content">
+						<p>
+							With the wider adoption of digital whiteboarding tools like Miro and FigJam, design
+							researchers have the opportunity to reimagine the spaces where design takes place. No
+							longer must designers and researchers keep their design work cloistered away from
+							their users; the digital whiteboard can allow everyone to engage together and immerse
+							themselves in data.
+						</p>
+						<p>
+							Our team worked with professional design practitioners both in industry and academia
+							to imagine a whiteboarding toolset that could help bring about this new paradigm of
+							digital participatory design.
+						</p>
+						<p>
+							These tools help design researchers <b>better engage with participants</b> during
+							sessions and <b>immerse themselves in the resulting data</b>.
+						</p>
+					</div>
+					<div class="info">
+						<div class="info__entry">
+							<h4>Timeframe</h4>
+							<ul>
+								<li>August 2021 - May 2022</li>
+							</ul>
+						</div>
+						<div class="info__entry">
+							<h4>Team</h4>
+							<ul>
+								<li>John Britti</li>
+								<li>Sean Perryman</li>
+								<li>Wenrui Zhang</li>
+							</ul>
+						</div>
+						<div class="info__entry">
+							<h4>Tools</h4>
+							<ul>
+								<li>User Interviews</li>
+								<li>Observation</li>
+								<li>Journey Mapping</li>
+								<li>Figma</li>
+							</ul>
+						</div>
+						<div class="info__entry">
+							<h4>Tags</h4>
+							<ul>
+								<li>Participatory Design</li>
+								<li>Whiteboarding</li>
+								<li>Professional Productivity</li>
+								<li>Figma</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
 		</section>
 		<section id="the-toolset">
 			<div class="container">
@@ -822,9 +832,9 @@
 					Overall impressions were positive, with participants expressing enthusiasm towards the
 					ideas, but of course, there were still issues that needed addressing. In the interest of
 					brevity, I'll just describe some of the more severe problems we identified in Evidence
-					Collection.
+					Collection. Here you you can see that users had problems identifying icons at a glance and
+					several participants noted readability issues with our text.
 				</p>
-				<p style="background: red">FINISH</p>
 				<p />
 				<h3>💌 Responding to Feedback</h3>
 				<p>
@@ -895,7 +905,7 @@
 		left: 0;
 		right: 0;
 		bottom: 0;
-		z-index: 1000;
+		z-index: 3000;
 		display: grid;
 		align-items: center;
 		justify-items: center;
@@ -997,7 +1007,7 @@
 	header {
 		grid-area: header;
 		max-height: 660px;
-		height: 60vh;
+		height: 40vh;
 	}
 	.title-card {
 		width: 100%;
@@ -1022,7 +1032,7 @@
 		h1 {
 			position: absolute;
 			// top: 40%;
-			bottom: 33%;
+			bottom: 10%;
 			left: -4rem;
 			width: 90%;
 			max-width: 640px;
@@ -1046,16 +1056,16 @@
 		padding-bottom: 50vh;
 		position: relative;
 		z-index: 1;
-		&:after {
-			content: '';
-			width: 0.5rem;
-			height: 0.5rem;
-			position: absolute;
-			left: 0;
-			top: -0.5rem;
-			background: radial-gradient(circle at 100% 0, #fff0 0.5rem, #fff 0px);
-			z-index: 10;
-		}
+		// &:after {
+		// 	content: '';
+		// 	width: 0.5rem;
+		// 	height: 0.5rem;
+		// 	position: absolute;
+		// 	left: 0;
+		// 	top: -0.5rem;
+		// 	background: radial-gradient(circle at 100% 0, #fff0 0.5rem, #fff 0px);
+		// 	z-index: 10;
+		// }
 	}
 	.container > img {
 		border-radius: 0.25rem;
@@ -1070,7 +1080,7 @@
 	.sidebar {
 		grid-area: sidebar;
 		justify-self: flex-end;
-		width: 100px;
+		width: 120px;
 		padding-left: 0.75rem;
 		padding-top: 2rem;
 	}
@@ -1091,15 +1101,19 @@
 		border-radius: 0.25rem;
 	}
 	.container {
-		padding: 2rem 0;
+		// padding: 2rem 0;
+		margin: 2rem 0;
 		padding-right: 2rem;
 		max-width: 64rem;
 		position: relative;
 		&.top {
 			border-top-right-radius: 0.5rem;
+			padding-top: 2rem;
+			margin-top: 0;
 			&:after {
 				position: absolute;
-				top: -0.5rem;
+				top: 0;
+				// top: -0.5rem;
 				left: -5rem;
 				bottom: 0;
 				width: 5rem;
@@ -1110,6 +1124,14 @@
 		&.bg {
 			background: var(--white);
 		}
+	}
+	#research {
+		padding-top: 0.5rem;
+		padding-bottom: 0.5rem;
+	}
+	#desgn {
+		padding-top: 0.5rem;
+		padding-bottom: 0.5rem;
 	}
 	#research:before {
 		position: absolute;
@@ -1166,8 +1188,27 @@
 		max-width: 760px;
 		box-sizing: border-box;
 	}
+	.intro {
+		display: flex;
+		flex-wrap: wrap-reverse;
+		// grid-template-columns: minmax(300px, 3fr) 2fr;
+		gap: 2rem;
+		.intro__content {
+			min-width: 340px;
+			flex: 3;
+			& > p {
+				margin-top: 0;
+			}
+		}
+		.info {
+			flex: 2;
+		}
+	}
 	.info {
-		columns: 3;
+		-webkit-column-width: 140px;
+		-moz-column-width: 140px;
+		column-width: 140px;
+		columns: 2;
 		font-size: 0.8em;
 		.info__entry {
 			margin-bottom: 0.75rem;
@@ -1280,7 +1321,7 @@
 		}
 	}
 
-	@media screen and (max-width: 760px) {
+	@media screen and (max-width: 780px) {
 		// section {
 		// 	padding: 1rem 1rem 1rem 0.5rem;
 		// }
@@ -1304,6 +1345,11 @@
 		}
 		.title-card h1 {
 			left: -0.5rem;
+		}
+	}
+	@media screen and (max-width: 625px) {
+		.info {
+			columns: 3;
 		}
 	}
 	@media screen and (max-width: 660px) {

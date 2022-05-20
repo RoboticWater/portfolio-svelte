@@ -3,7 +3,7 @@
 	import anime from 'animejs';
 
 	let splotchAnimation, textAnimation;
-	let scrollY = 0,
+	let scrollY = 1000,
 		innerHeight = 0;
 	// $: if (scrollY) {
 	// 	// 	splotchAnimation.seek(splotchAnimation.duration * (scrollY * 4 / innerHeight) * 1.8);

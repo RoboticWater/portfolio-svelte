@@ -48,6 +48,7 @@
 	}
 	h3 {
 		margin-bottom: 0.25rem;
+		margin-top: 0;
 		font-size: 1.75rem;
 	}
 	.toolset-entry__number {

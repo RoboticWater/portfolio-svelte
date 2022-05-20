@@ -1,11 +1,12 @@
 <script>
+	import { layoutBGWhite } from '../layout-bg';
 	import '../app.css';
 </script>
 
-<header>
+<header class="main-header" class:white={$layoutBGWhite}>
 	<a href="/">Home</a>
 	<a href="/#work">Work</a>
-	<a href="/">Resume</a>
+	<a href="./Britti-Resume-2022.pdf" target="__blank">Resume</a>
 </header>
 <main>
 	<slot />
@@ -22,14 +23,21 @@
 		// background: var(--white);
 		font-size: 1rem;
 		padding: 0.5rem;
+		// padding: 1rem 0.5rem;
 		backdrop-filter: blur(10px);
 		-webkit-backdrop-filter: blur(10px);
+		transition: background 0.2s ease;
+		&.white {
+			background: var(--white);
+		}
 		a {
 			color: var(--black);
 			text-decoration: none;
-			margin: 0.25rem;
+			padding: 0.5rem;
+			border-radius: 2px;
 			&:hover {
 				text-decoration: underline;
+				// background: rgba(0, 0, 0, 0.05);
 			}
 		}
 	}
