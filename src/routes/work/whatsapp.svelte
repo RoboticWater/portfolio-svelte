@@ -126,9 +126,7 @@
 	<article>
 		{#if y > 500}
 			<div
-				style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;
-				backdrop-filter: blur(10px); 
-				-webkit-backdrop-filter: blur(10px);"
+				class="return"
 				in:fade|local={{ duration: 200, easing: quadOut }}
 				out:fade|local={{ duration: 200, easing: quadOut }}
 			>
@@ -518,6 +516,16 @@
 </main>
 
 <style lang="scss">
+	.return {
+		position: fixed;
+		bottom: 20px;
+		right: 20px;
+		z-index: 1000;
+		background: var(--white);
+		border-radius: 2px;
+		// backdrop-filter: blur(10px);
+		// -webkit-backdrop-filter: blur(10px);
+	}
 	.question-answer {
 		display: flex;
 		flex-wrap: wrap;
