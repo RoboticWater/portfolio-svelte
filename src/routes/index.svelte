@@ -7,6 +7,8 @@
 	import { layoutBGWhite } from '../layout-bg';
 	import { onMount } from 'svelte';
 
+	import whiteboardingImg from '../assets/whiteboarding/main-image.png';
+
 	onMount(() => {
 		layoutBGWhite.set(false);
 	});
@@ -18,7 +20,7 @@
 			date: '2022',
 			type: 'UX Design',
 			result: 'Figma Prototype',
-			image: ''
+			image: whiteboardingImg
 		},
 		{
 			title: 'WhatsApp for SMBs',
@@ -26,7 +28,8 @@
 			date: '2021',
 			type: 'UX Design',
 			result: 'Balsamiq Prototype',
-			image: ''
+			image:
+				'https://images.unsplash.com/photo-1614680376408-81e91ffe3db7?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1548'
 		}
 	];
 
@@ -57,7 +60,7 @@
 	<div id="about">
 		<div class="about__content">
 			<div class="about__content__item">
-				<p style="margin:0; font-size: 4rem; font-weight: bold;">Hi, I'm John</p>
+				<p class="name">Hi, I'm John</p>
 			</div>
 			<div class="about__content__item">
 				<p>I'm a designer, user researcher, and web developer located in Atlanta, GA.</p>
@@ -104,28 +107,19 @@
 		</Observer>
 	</div>
 	<div id="work" class="flex justify-center">
-		<div class="grid p-4 gap-4 max-w-5xl w-full">
-			<h1>Work</h1>
-			<!-- <h2 class="inline text-6xl font-bold my-6 col-span-2">Work</h2> -->
-			<!-- <h2
-				class="inline text-8xl font-serif italic uppercase font-bold self-center text-center my-6 col-span-2"
-			>
-				Work
-			</h2> -->
+		<h1>Work</h1>
+		<div class="work-items">
 			{#each list as item}
-				<a class="work-item flex flex-col cursor-pointer" href={item.slug}>
-					<div class="grid overflow-hidden h-96 rounded-md mb-2">
-						<div class="image bg-cover bg-center" style={`background-image: url(${item.image})`} />
+				<a class="work-item" href={item.slug}>
+					<div class="image-container">
+						<div class="image" style={`background-image: url(${item.image})`} />
 					</div>
-					<h2 class="text-4xl italic font-serif font-black text-zinc-800 mb-1">{item.title}</h2>
-					<div class="flex items-center gap-2 text-zinc-800 text-mono">
-						<div>
-							{item.date}
-							<!-- {format(parse(item.data.date, 'yyyy-MM-dd', new Date()), 'yyyy')} -->
-						</div>
-						<div class="w-1 h-1 rounded bg-zinc-800" />
+					<h2>{item.title}</h2>
+					<div class="info">
+						<div>{item.date}</div>
+						<div class="spacer" />
 						<div>{item.type}</div>
-						<div class="w-1 h-1 rounded bg-zinc-800" />
+						<div class="spacer" />
 						<div>{item.result}</div>
 					</div>
 				</a>
@@ -135,6 +129,64 @@
 </section>
 
 <style lang="scss">
+	#work {
+		padding: 0 1rem;
+	}
+	.work-items {
+		gap: 1rem;
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+	}
+	.work-item {
+		display: flex;
+		flex-direction: column;
+		cursor: pointer;
+		text-decoration: none;
+		.image-container {
+			display: grid;
+			overflow: hidden;
+			height: 20rem;
+			border-radius: 0.75rem;
+			margin-bottom: 0.5rem;
+			.image {
+				background-position: center;
+				background-size: cover;
+				transition: transform 0.3s ease;
+			}
+		}
+		h2 {
+			font-style: italic;
+			font-family: var(--font-serif);
+			color: var(--black);
+			font-weight: bold;
+			margin: 0 0 2px 0;
+			font-size: 2rem;
+		}
+		&:hover {
+			h2 {
+				text-decoration: underline;
+			}
+			.image {
+				transform: scale(1.1);
+			}
+		}
+		.info {
+			display: flex;
+			align-items: center;
+			font-family: var(--font-mono);
+			gap: 0.5rem;
+			font-size: 1rem;
+			.spacer {
+				width: 0.25rem;
+				height: 0.25rem;
+				border-radius: 1px;
+				background: var(--black);
+			}
+			div {
+				color: var(--black);
+			}
+		}
+	}
 	section {
 		padding-bottom: 48rem;
 		animation: fade-section 800ms cubic-bezier(0.33, 0.43, 0.04, 0.97);
@@ -169,6 +221,12 @@
 		margin-bottom: 6rem;
 		max-width: 64rem;
 		padding: 1rem;
+		.name {
+			line-height: 1.1;
+			margin: 0;
+			font-size: 4rem;
+			font-weight: bold;
+		}
 	}
 	.about__content {
 		display: flex;
@@ -185,9 +243,6 @@
 			// text-transform: uppercase;
 			font-weight: 700;
 		}
-	}
-	#work > div {
-		grid-template-columns: repeat(auto-fit, minmax(324px, 1fr));
 	}
 	.about__content__item {
 		min-width: 324px;

@@ -12,7 +12,7 @@
 	let midX = 1728 / 2,
 		midY = 1117 / 2;
 	onMount(() => {
-		scrollY = 0;
+		// scrollY = 0;
 		// 	// anime({
 		// 	// 	targets: '.splotches use',
 		// 	// 	translateX: (el) => {
