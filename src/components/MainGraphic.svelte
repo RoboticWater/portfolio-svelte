@@ -3,8 +3,7 @@
 	import anime from 'animejs';
 
 	let splotchAnimation, textAnimation;
-	let scrollY = 1000,
-		innerHeight = 0;
+	let scrollY, innerHeight;
 	// $: if (scrollY) {
 	// 	// 	splotchAnimation.seek(splotchAnimation.duration * (scrollY * 4 / innerHeight) * 1.8);
 	// 	textAnimation.seek(textAnimation.duration * (scrollY / innerHeight) * 3);
@@ -13,6 +12,7 @@
 	let midX = 1728 / 2,
 		midY = 1117 / 2;
 	onMount(() => {
+		scrollY = 0;
 		// 	// anime({
 		// 	// 	targets: '.splotches use',
 		// 	// 	translateX: (el) => {

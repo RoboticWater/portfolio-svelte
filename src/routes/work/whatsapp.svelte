@@ -2,24 +2,24 @@
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
 	import { quadOut } from 'svelte/easing';
-	import { layoutBGWhite } from '../layout-bg';
+	import { layoutBGWhite } from '../../layout-bg';
 
-	import Card from '../components/Card.svelte';
-	import ProblemSolution from '../components/ProblemSolution.svelte';
-	import Observer from '../components/Observer.svelte';
-	import ConceptEntry from '../components/ConceptEntry.svelte';
-	import Sidebar from '../components/Sidebar.svelte';
-	import ReturnToTop from '../components/ReturnToTop.svelte';
+	import Card from '../../components/Card.svelte';
+	import ProblemSolution from '../../components/ProblemSolution.svelte';
+	import Observer from '../../components/Observer.svelte';
+	import ConceptEntry from '../../components/ConceptEntry.svelte';
+	import Sidebar from '../../components/Sidebar.svelte';
+	import ReturnToTop from '../../components/ReturnToTop.svelte';
 
-	import header from '../assets/whiteboarding/whiteboarding-bg.png';
-	import tripleDiamond from '../assets/whatsapp/triple-diamond.svg';
-	import stakeholderMap from '../assets/whatsapp/stakeholder-problem-map.jpg';
-	import problemMap from '../assets/whatsapp/problem-map.png';
-	import journeyMap from '../assets/whatsapp/journey-map.png';
-	import interviewImages from '../assets/whatsapp/interview-images.png';
-	import personalEval from '../assets/whatsapp/personal-eval.png';
-	import contactAnnotation from '../assets/whatsapp/contact-annotation.png';
-	import queue from '../assets/whatsapp/queue.png';
+	import header from '../../assets/whiteboarding/whiteboarding-bg.png';
+	import tripleDiamond from '../../assets/whatsapp/triple-diamond.svg';
+	import stakeholderMap from '../../assets/whatsapp/stakeholder-problem-map.jpg';
+	import problemMap from '../../assets/whatsapp/problem-map.png';
+	import journeyMap from '../../assets/whatsapp/journey-map.png';
+	import interviewImages from '../../assets/whatsapp/interview-images.png';
+	import personalEval from '../../assets/whatsapp/personal-eval.png';
+	import contactAnnotation from '../../assets/whatsapp/contact-annotation.png';
+	import queue from '../../assets/whatsapp/queue.png';
 
 	onMount(() => {
 		layoutBGWhite.set(true);
@@ -129,8 +129,8 @@
 				style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;
 				backdrop-filter: blur(10px); 
 				-webkit-backdrop-filter: blur(10px);"
-				in:fade={{ duration: 200, easing: quadOut }}
-				out:fade={{ duration: 200, easing: quadOut }}
+				in:fade|local={{ duration: 200, easing: quadOut }}
+				out:fade|local={{ duration: 200, easing: quadOut }}
 			>
 				<ReturnToTop />
 			</div>

@@ -14,7 +14,7 @@
 	let list = [
 		{
 			title: 'Participatory Whiteboarding',
-			slug: '/whiteboarding',
+			slug: '/work/whiteboarding',
 			date: '2022',
 			type: 'UX Design',
 			result: 'Figma Prototype',
@@ -22,7 +22,7 @@
 		},
 		{
 			title: 'WhatsApp for SMBs',
-			slug: '/whatsapp',
+			slug: '/work/whatsapp',
 			date: '2021',
 			type: 'UX Design',
 			result: 'Balsamiq Prototype',
@@ -45,8 +45,8 @@
 			style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;
 		backdrop-filter: blur(10px); 
 		-webkit-backdrop-filter: blur(10px);"
-			in:fade={{ duration: 200, easing: quadOut }}
-			out:fade={{ duration: 200, easing: quadOut }}
+			in:fade|local={{ duration: 200, easing: quadOut }}
+			out:fade|local={{ duration: 200, easing: quadOut }}
 		>
 			<ReturnToTop />
 		</div>
@@ -113,7 +113,7 @@
 				Work
 			</h2> -->
 			{#each list as item}
-				<a sveltekit:prefetch class="work-item flex flex-col cursor-pointer" href={item.slug}>
+				<a class="work-item flex flex-col cursor-pointer" href={item.slug}>
 					<div class="grid overflow-hidden h-96 rounded-md mb-2">
 						<div class="image bg-cover bg-center" style={`background-image: url(${item.image})`} />
 					</div>
