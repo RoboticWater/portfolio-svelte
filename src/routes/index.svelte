@@ -105,7 +105,7 @@
 		</Observer>
 	</div>
 	<div id="work" class="flex justify-center">
-		<h1>Work</h1>
+		<h1>Selected Work</h1>
 		<div class="work-items">
 			{#each list as item}
 				<a class="work-item" href={item.slug}>

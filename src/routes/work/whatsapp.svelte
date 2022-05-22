@@ -1054,6 +1054,9 @@
 				padding: 0.5rem;
 			}
 		}
+		.info .info__entry {
+			min-width: 110px;
+		}
 	}
 
 	@keyframes fade-in {
