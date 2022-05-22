@@ -202,7 +202,7 @@
 							<h4>Tools</h4>
 							<ul>
 								<li>User Interviews</li>
-								<li>Afinity Mapping</li>
+								<li>Affinity Mapping</li>
 								<li>Journey Mapping</li>
 								<li>Survey</li>
 								<li>Balsamiq</li>
@@ -435,7 +435,7 @@
 					While there were several problems that users experienced across different businesses like
 					privacy concerns with WhatsApp now that Facebook had changed its privacy policy or having
 					multiple physical touchpoints, there were consistent enough themes with goods caterers
-					that we felt confident purusing this population further.
+					that we felt confident pursuing this population further.
 				</p>
 				<div class="question-answer">
 					<div class="question">
@@ -455,9 +455,9 @@
 				<p>
 					With our focus narrowed in further, we conducted more contextual interviews, focused on
 					gaining a greater insight into the moment to moment activities goods caterers perform and
-					painpoints they experience. In addition to asking our users questions directly about their
-					journey, we asked them to provide pictures from their WhatsApp and physical work spaces,
-					which you can see below.
+					pain points they experience. In addition to asking our users questions directly about
+					their journey, we asked them to provide pictures from their WhatsApp and physical work
+					spaces, which you can see below.
 				</p>
 				<img src={interviewImages} alt="" class="zoomable" style="max-width: 760px" />
 				<p>
@@ -489,13 +489,13 @@
 				</div>
 				<h3>📋 Survey <span class="n">N=3</span></h3>
 				<p>
-					With our user journey mapped out, we wanted to present the painpoints back to a wider
+					With our user journey mapped out, we wanted to present the pain points back to a wider
 					population so they could rank which problems they felt were most salient. Thus, we created
 					a ranking survey in Qualtrics and sent it out to our users and a few WhatsApp small
 					business groups.
 				</p>
 				<p>
-					As you can tell by the meagre population size, the survey did not circulate very
+					As you can tell by the meager population size, the survey did not circulate very
 					effectively, so we ultimately had to rely on our assessment of the problems to proceed.
 				</p>
 				<h3>🎯 Problem Selection</h3>

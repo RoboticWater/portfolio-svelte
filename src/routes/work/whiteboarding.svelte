@@ -303,7 +303,7 @@
 						<span slot="title">Question Prompts</span>
 						<span slot="description">
 							This tool empowers researchers with the ability to better structure their user
-							sessions with questionaire functionality and helps participants navigate complex
+							sessions with questionnaire functionality and helps participants navigate complex
 							whiteboard interfaces.
 						</span>
 					</ToolsetEntry>
@@ -331,7 +331,7 @@
 				<h2><a href="#research">Research</a></h2>
 				<p>
 					Because our problem space was more speculative than reactive—that is, our goal was to
-					imagine new approaches to participatory desisgn, not directly address some specific point
+					imagine new approaches to participatory design, not directly address some specific point
 					of failure—we conducted a mixed-method research approach designed to both identify the
 					challenges of participatory design and collect novel approaches to participatory design
 					that we could bring into our ideation.
@@ -504,7 +504,7 @@
 						<p>
 							The most fruitful research endeavor we pursued, however, were 7 semi-structured
 							interviews with UX practitioners. 5 of which were peers at Georgia Tech and 2 of which
-							were colleages at NCR.
+							were colleagues at NCR.
 						</p>
 						<p>
 							Each interview lasted roughly an hour, and we asked each participant to bring (or
@@ -728,7 +728,7 @@
 				<p>
 					With our new set of ideas in hand, we began designing wireframes for testing. Rather than
 					building out prototypes over a longer period of time, then having isolated testing
-					periods, we adopted a more lean UX approach where we tested each protoype weekly,
+					periods, we adopted a more lean UX approach where we tested each prototype weekly,
 					regardless of where it was in development. This process afforded us two distinct benefits:
 				</p>
 				<ol>
@@ -767,7 +767,7 @@
 					</div>
 				</div>
 				<p>
-					Results from early on lead to larger swings in develoment. For instance, early feedback
+					Results from early on lead to larger swings in development. For instance, early feedback
 					suggested that breakout boards while potentially helpful in certain circumstances, was too
 					niche a problem and too slight a solution to warrant continued development.
 				</p>
@@ -837,7 +837,7 @@
 				<h3>💌 Responding to Feedback</h3>
 				<p>
 					We had some time before our final presentation, so we decided to respond to some of the
-					feedback we recieved. We couldn't get to everything, but using our results, we triaged the
+					feedback we received. We couldn't get to everything, but using our results, we triaged the
 					more pernicious issues and a few lower priority "quick wins."
 				</p>
 				<p>

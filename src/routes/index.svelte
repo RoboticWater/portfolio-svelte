@@ -97,7 +97,7 @@
 					<div class="number">4</div>
 					<h2>Skilled Communication</h2>
 					<div class="description-block__content">
-						I make things for people, and that means a lot of talking. Fortinately, I’m always
+						I make things for people, and that means a lot of talking. Fortunately, I’m always
 						excited to engage in critical dialogs and learn from users and colleagues alike.
 					</div>
 				</div>
