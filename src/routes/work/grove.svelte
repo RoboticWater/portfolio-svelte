@@ -26,12 +26,6 @@
 	import wireframes from '../../assets/grove/Wireframes User Feedback Sessions.png';
 	import figma from '../../assets/grove/Figma1.png';
 	import susඞ from '../../assets/grove/R4 Compiled SUS.png';
-	// import problemMap from '../../assets/grove/problem-map.png';
-	// import journeyMap from '../../assets/grove/journey-map.png';
-	// import interviewImages from '../../assets/grove/interview-images.png';
-	// import personalEval from '../../assets/grove/personal-eval.png';
-	// import contactAnnotation from '../../assets/grove/contact-annotation.png';
-	// import queue from '../../assets/grove/queue.png';
 
 	onMount(() => {
 		layoutBGWhite.set(true);
@@ -288,16 +282,16 @@
 				<h3>🔎 Discovery</h3>
 				<div class="card-list" style="display: flex; flex-direction: column; max-width: 760px">
 					<Card>
-						<span slot="label" />
-						<span slot="title">Research Approach #1</span>
+						<span slot="label">Research Approach #1</span>
+						<span slot="title">Literature Review</span>
 						<span slot="content">
 							We conducted a literature review, determining the demographic characteristics of our
 							user population, exploring academic approaches to our problem space
 						</span>
 					</Card>
 					<Card>
-						<span slot="label" />
-						<span slot="title">Research Approach #2</span>
+						<span slot="label">Research Approach #2</span>
+						<span slot="title">Competitive Analysis</span>
 						<span slot="content">
 							We performed a thorough analysis of existing solutions in the vegan/vegetarian
 							nutrition space, pinpointing the benefits these systems already provide, and more
@@ -305,8 +299,8 @@
 						</span>
 					</Card>
 					<Card>
-						<span slot="label" />
-						<span slot="title">Research Approach #3</span>
+						<span slot="label">Research Approach #3</span>
+						<span slot="title">Interviews</span>
 						<span slot="content">
 							Finally, and most critically, we held 5 30-60 minute semi-structured interviews with
 							our user population, discovering their needs and pain points and then mapping their
