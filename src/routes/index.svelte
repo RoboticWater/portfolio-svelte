@@ -8,6 +8,7 @@
 	import { onMount } from 'svelte';
 
 	import whiteboardingImg from '../assets/whiteboarding/main-image.png';
+	import groveHeader from '../assets/grove/grove-header.png';
 
 	onMount(() => {
 		layoutBGWhite.set(false);
@@ -26,10 +27,19 @@
 			title: 'WhatsApp for SMBs',
 			slug: '/work/whatsapp',
 			date: '2021',
-			type: 'UX Design',
+			type: 'UX Research',
 			result: 'Balsamiq Prototype',
 			image:
 				'https://images.unsplash.com/photo-1614680376408-81e91ffe3db7?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1548'
+		},
+		{
+			title: 'Grove',
+			slug: '/work/grove',
+			date: '2020',
+			type: 'UX Design',
+			result: 'Figma Prototype',
+			image: groveHeader,
+			border: true
 		}
 	];
 
@@ -108,7 +118,7 @@
 		<h1>Selected Work</h1>
 		<div class="work-items">
 			{#each list as item}
-				<a class="work-item" href={item.slug}>
+				<a class="work-item" href={item.slug} class:border={item.border}>
 					<div class="image-container">
 						<div class="image" style={`background-image: url(${item.image})`} />
 					</div>
@@ -150,6 +160,10 @@
 		flex-direction: column;
 		cursor: pointer;
 		text-decoration: none;
+		// &.border .image-container {
+		// 	border: 1px var(--black) solid;
+		// 	box-sizing: border-box;
+		// }
 		.image-container {
 			display: grid;
 			overflow: hidden;

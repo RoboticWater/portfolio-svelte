@@ -188,7 +188,7 @@
 						<div class="info__entry">
 							<h4>Timeframe</h4>
 							<ul>
-								<li>January 2020 - May 2020</li>
+								<li>January 2021 - May 2021</li>
 							</ul>
 						</div>
 						<div class="info__entry">
@@ -500,16 +500,30 @@
 				</p>
 				<h3>🎯 Problem Selection</h3>
 				<img src={personalEval} alt="" class="zoomable" style="max-width: 460px" />
+				<p>
+					In lieu of user feedback, we constructed this problem selection activity which involved
+					charting each problem we'd identified along axes of sketchability (how easily we could
+					actually design the idea) and generalizability (how intensely, in our estimation given the
+					data we had, the idea affected our population).
+				</p>
+				<p>
+					In the next section, I'll describe the winning ideas, and how we addressed them with
+					design prototypes.
+				</p>
 			</div>
 		</section>
 		<section id="design">
 			<div class="container">
 				<h2><a href="#design">Design</a></h2>
+				<h3>🗒️ Problem 1: Disparate Business Information</h3>
+				<h3>💬 Problem 2: Message Management</h3>
+				<h3>📰 Problem 3: Catalog Creation</h3>
 			</div>
 		</section>
 		<section id="evaluation">
 			<div class="container">
 				<h2><a href="#evaluation">Evaluation</a></h2>
+				<h3>📋 Concept Testing <span class="n">N=4</span></h3>
 			</div>
 		</section>
 	</article>
