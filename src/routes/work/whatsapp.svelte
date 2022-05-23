@@ -19,7 +19,11 @@
 	import interviewImages from '../../assets/whatsapp/interview-images.png';
 	import personalEval from '../../assets/whatsapp/personal-eval.png';
 	import contactAnnotation from '../../assets/whatsapp/contact-annotation.png';
+	import queueAll from '../../assets/whatsapp/queue-all.png';
+	import contactAnnotationAll from '../../assets/whatsapp/contact-annotation-all.png';
 	import queue from '../../assets/whatsapp/queue.png';
+	import catalogs from '../../assets/whatsapp/catalogs.png';
+	import results from '../../assets/whatsapp/results.png';
 
 	onMount(() => {
 		layoutBGWhite.set(true);
@@ -515,15 +519,75 @@
 		<section id="design">
 			<div class="container">
 				<h2><a href="#design">Design</a></h2>
+				<p>
+					We didn't have much time remaining in the semester to conduct a lengthy design process and
+					we didn't want to skimp on an evaluation at the end, so we had to settle for an expedited
+					design phase. This meant only creating wireframes; however, we did do our best to ensure
+					that even as low-fidelity prototypes, they maintained the structure of WhatsApp.
+				</p>
 				<h3>🗒️ Problem 1: Disparate Business Information</h3>
+				<img src={contactAnnotationAll} alt="" class="zoomable" style="max-width: 760px" />
+				<p>
+					The first significant problem we identified was how often our users kept business-relevant
+					information across a variety of touchpoints, from WhatsApp to other note-taking apps, to
+					whiteboards and even physical notebooks.
+				</p>
+				<p>
+					We address this problem with contact annotation. Users can keep business pertinent
+					information right in the contact Users can highlight contacts with colors, distinguishing
+					business and personal contacts.
+				</p>
 				<h3>💬 Problem 2: Message Management</h3>
+				<img src={queueAll} alt="" class="zoomable" style="max-width: 760px" />
+				<p />
+				<p>
+					The second problem is that users can sometimes let customers fall through the cracks
+					because business and personal messages are all mixed together.
+				</p>
+				<p>
+					With this idea, users can set time windows for orders, and have all those orders organized
+					in a checklist, so they're not overburdened with
+				</p>
 				<h3>📰 Problem 3: Catalog Creation</h3>
+				<img src={catalogs} alt="" class="zoomable" style="max-width: 760px" />
+				<p>
+					Finally, users spend a significant amount of time putting together catalogs and menus,
+					often re-writing redundant items.
+				</p>
+				<p>
+					This concept lets users easily create and save catalogs with automatic suggestions from
+					previous catalogs, and customers can now simply select items from a menu.
+				</p>
 			</div>
 		</section>
 		<section id="evaluation">
 			<div class="container">
 				<h2><a href="#evaluation">Evaluation</a></h2>
 				<h3>📋 Concept Testing <span class="n">N=4</span></h3>
+				<p>
+					Finally, we ran these concepts past several of our users to determine if they both
+					understand our design ideas and can imagine actually using each design within a real life
+					business context.
+				</p>
+				<p>
+					The protocol went as follows: we described concept verbally and asked users if they could
+					imagine using it for their business. Then we walked through each wireframe and asked if
+					the concept conformed to their expectations in practice. To negate order effects, the
+					order of wireframes was randomized each session.
+				</p>
+				<img src={results} alt="" class="zoomable" style="max-width: 760px" />
+				<p>
+					As you probably guessed given the beginning of this article, results showed that the first
+					two concepts resonated with users, but not the catalog composer.
+				</p>
+				<p>
+					Participants felt that making the catalog wasn't all that difficult and they preferred
+					having the option to make the catalog in their own style. However, while our design wasn't
+					ideal, in the process of testing it, many participants mentioned that when they like
+					making their own catalogs, they have to keep finding them in their phone to use as
+					attachments. It's possible another design idea could more directly address this
+					organizational issue.
+				</p>
 			</div>
 		</section>
 	</article>
