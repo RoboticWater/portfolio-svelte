@@ -238,6 +238,10 @@
 						shaders, models, and other art assets
 					</li>
 				</ol>
+				<p>
+					As you might expect, this was a lot to manage, but my team made it easy for me, and
+					together we worked to produce an impressive VR experience.
+				</p>
 			</div>
 		</section>
 		<section id="development">
