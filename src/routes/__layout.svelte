@@ -23,7 +23,7 @@
 <header class="main-header" class:white={$layoutBGWhite}>
 	<a href="/">Home</a>
 	<a href="/#work">Work</a>
-	<a href="./Britti-Resume-2022.pdf" target="__blank">Resume</a>
+	<a href="/Britti-Resume-2022AR.pdf" target="__blank">Resume</a>
 </header>
 <div class="name" class:remove={url.pathname !== '/'}>
 	<a href="/" class:hide={hideExtra}>

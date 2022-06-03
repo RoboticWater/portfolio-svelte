@@ -69,7 +69,7 @@
 				width: 14px;
 			}
 			.arrow {
-				fill: var(--article-color);
+				fill: var(--article-active-color);
 			}
 		}
 		a {

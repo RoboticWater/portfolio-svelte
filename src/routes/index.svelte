@@ -9,6 +9,7 @@
 
 	import whiteboardingImg from '../assets/whiteboarding/main-image.png';
 	import groveHeader from '../assets/grove/grove-header.png';
+	import iretiHeader from '../assets/ireti/zoopraxiscope-01.jpg';
 
 	onMount(() => {
 		layoutBGWhite.set(false);
@@ -40,6 +41,14 @@
 			result: 'Figma Prototype',
 			image: groveHeader,
 			border: true
+		},
+		{
+			title: 'Ireti',
+			slug: '/work/ireti',
+			date: '2022',
+			type: 'VR Development',
+			result: 'VR Film',
+			image: iretiHeader
 		}
 	];
 
